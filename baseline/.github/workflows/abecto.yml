@@ -1,0 +1,35 @@
+name: ABECTO CI Demo Example
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    container: ghcr.io/fusion-jena/abecto:v2.2.0
+    permissions:
+      checks: write
+      contents: read
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+      - name: Run ABECTO CI Demo Example Comparison
+        run: abecto --reportOn "http://example.org/graph1/" --export deviationsMarkdown=deviations.md --export measurementsMarkdown=measurements.md --failOnDeviation abecto-configuration.trig
+      - name: Show deviations
+        uses: LouisBrunner/checks-action@v2.0.0
+        if: failure()
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Deviations
+          conclusion: ${{ job.status }}
+          output: |
+            {"summary":""}
+          output_text_description_file: deviations.md
+      - name: Show measurements
+        uses: LouisBrunner/checks-action@v2.0.0
+        if: always()
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Measurements
+          conclusion: neutral
+          output: |
+            {"summary":""}
+          output_text_description_file: measurements.md

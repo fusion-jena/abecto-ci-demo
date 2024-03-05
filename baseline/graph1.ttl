@@ -1,0 +1,125 @@
+@prefix ex1: <http://example.org/graph1/> .
+
+ex1:metre a                   ex1:Unit .
+ex1:metre ex1:quantityKind    ex1:length .
+ex1:metre ex1:name            "metre"@en .
+ex1:metre ex1:symbol          "m" .
+ex1:metre ex1:oneEqualsOfBase 1.0 .
+
+ex1:second a                   ex1:Unit .
+ex1:second ex1:quantityKind    ex1:time .
+ex1:second ex1:name            "second"@en .
+ex1:second ex1:symbol          "s" .
+ex1:second ex1:oneEqualsOfBase 1.0 .
+
+ex1:mole a                   ex1:Unit .
+ex1:mole ex1:quantityKind    ex1:amountOfSubstance .
+ex1:mole ex1:name            "mole"@en .
+ex1:mole ex1:symbol          "mol" .
+ex1:mole ex1:oneEqualsOfBase 1.0 .
+
+ex1:ampere a                   ex1:Unit .
+ex1:ampere ex1:quantityKind    ex1:electricCurrent .
+ex1:ampere ex1:name            "ampere"@en .
+ex1:ampere ex1:symbol          "A" .
+ex1:ampere ex1:oneEqualsOfBase 1.0 .
+
+ex1:kelvin a                   ex1:Unit .
+ex1:kelvin ex1:quantityKind    ex1:temperature .
+ex1:kelvin ex1:name            "kelvin"@en .
+ex1:kelvin ex1:symbol          "K" .
+ex1:kelvin ex1:oneEqualsOfBase 1.0 .
+
+ex1:candela a                   ex1:Unit .
+ex1:candela ex1:quantityKind    ex1:luminousIntensity .
+ex1:candela ex1:name            "meter"@en .
+ex1:candela ex1:symbol          "cd" .
+ex1:candela ex1:oneEqualsOfBase 1.0 .
+
+ex1:kilogram a                   ex1:Unit .
+ex1:kilogram ex1:quantityKind    ex1:mass .
+ex1:kilogram ex1:name            "meter"@en .
+ex1:kilogram ex1:symbol          "kg" .
+ex1:kilogram ex1:oneEqualsOfBase 1.0 .
+
+ex1:length a                                      ex1:QuantityKind .
+ex1:length ex1:name                               "length"@en .
+ex1:length ex1:amountOfSubstanceDimensionExponent 0 .
+ex1:length ex1:electricCurrentDimensionExponent   0 .
+ex1:length ex1:lengthDimensionExponent            1 .
+ex1:length ex1:luminousIntensityDimensionExponent 0 .
+ex1:length ex1:massDimensionExponent              0 .
+ex1:length ex1:temperatureDimensionExponent       0 .
+ex1:length ex1:timeDimensionExponent              0 .
+
+ex1:time a                                      ex1:QuantityKind .
+ex1:time ex1:name                               "time"@en .
+ex1:time ex1:amountOfSubstanceDimensionExponent 0 .
+ex1:time ex1:electricCurrentDimensionExponent   0 .
+ex1:time ex1:lengthDimensionExponent            0 .
+ex1:time ex1:luminousIntensityDimensionExponent 0 .
+ex1:time ex1:massDimensionExponent              0 .
+ex1:time ex1:temperatureDimensionExponent       0 .
+ex1:time ex1:timeDimensionExponent              1 .
+
+ex1:amountOfSubstance a                                      ex1:QuantityKind .
+ex1:amountOfSubstance ex1:name                               "amountOfSubstance"@en .
+ex1:amountOfSubstance ex1:amountOfSubstanceDimensionExponent 1 .
+ex1:amountOfSubstance ex1:electricCurrentDimensionExponent   0 .
+ex1:amountOfSubstance ex1:lengthDimensionExponent            0 .
+ex1:amountOfSubstance ex1:luminousIntensityDimensionExponent 0 .
+ex1:amountOfSubstance ex1:massDimensionExponent              0 .
+ex1:amountOfSubstance ex1:temperatureDimensionExponent       0 .
+ex1:amountOfSubstance ex1:timeDimensionExponent              0 .
+
+ex1:electricCurrent a                                      ex1:QuantityKind .
+ex1:electricCurrent ex1:name                               "electricCurrent"@en .
+ex1:electricCurrent ex1:amountOfSubstanceDimensionExponent 0 .
+ex1:electricCurrent ex1:electricCurrentDimensionExponent   1 .
+ex1:electricCurrent ex1:lengthDimensionExponent            0 .
+ex1:electricCurrent ex1:luminousIntensityDimensionExponent 0 .
+ex1:electricCurrent ex1:massDimensionExponent              0 .
+ex1:electricCurrent ex1:temperatureDimensionExponent       0 .
+ex1:electricCurrent ex1:timeDimensionExponent              0 .
+
+ex1:temperature a                                      ex1:QuantityKind .
+ex1:temperature ex1:name                               "temperature"@en .
+ex1:temperature ex1:amountOfSubstanceDimensionExponent 0 .
+ex1:temperature ex1:electricCurrentDimensionExponent   0 .
+ex1:temperature ex1:lengthDimensionExponent            0 .
+ex1:temperature ex1:luminousIntensityDimensionExponent 0 .
+ex1:temperature ex1:massDimensionExponent              0 .
+ex1:temperature ex1:temperatureDimensionExponent       1 .
+ex1:temperature ex1:timeDimensionExponent              0 .
+
+ex1:luminousIntensity a                                      ex1:QuantityKind .
+ex1:luminousIntensity ex1:name                               "luminousIntensity"@en .
+ex1:luminousIntensity ex1:amountOfSubstanceDimensionExponent 0 .
+ex1:luminousIntensity ex1:electricCurrentDimensionExponent   0 .
+ex1:luminousIntensity ex1:lengthDimensionExponent            0 .
+ex1:luminousIntensity ex1:luminousIntensityDimensionExponent 1 .
+ex1:luminousIntensity ex1:massDimensionExponent              0 .
+ex1:luminousIntensity ex1:temperatureDimensionExponent       0 .
+ex1:luminousIntensity ex1:timeDimensionExponent              0 .
+
+ex1:mass a                                      ex1:QuantityKind .
+ex1:mass ex1:name                               "mass"@en .
+ex1:mass ex1:amountOfSubstanceDimensionExponent 0 .
+ex1:mass ex1:electricCurrentDimensionExponent   0 .
+ex1:mass ex1:lengthDimensionExponent            0 .
+ex1:mass ex1:luminousIntensityDimensionExponent 0 .
+ex1:mass ex1:massDimensionExponent              1 .
+ex1:mass ex1:temperatureDimensionExponent       0 .
+ex1:mass ex1:timeDimensionExponent              0 .
+
+ex1:micrometre a                   ex1:Unit .
+ex1:micrometre ex1:quantityKind    ex1:length .
+ex1:micrometre ex1:name            "micrometre"@en .
+ex1:micrometre ex1:symbol          "μm" .
+ex1:micrometre ex1:oneEqualsOfBase 1000000 .
+
+ex1:nanometre a                   ex1:Unit .
+ex1:nanometre ex1:quantityKind    ex1:length .
+ex1:nanometre ex1:name            "nanometre"@en .
+ex1:nanometre ex1:symbol          "nm" .
+ex1:nanometre ex1:oneEqualsOfBase 0.000000001 .

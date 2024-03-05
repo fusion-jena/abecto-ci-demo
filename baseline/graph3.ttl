@@ -1,0 +1,125 @@
+@prefix ex3: <http://example.org/graph3/> .
+
+ex3:metre a                   ex3:Unit .
+ex3:metre ex3:quantityKind    ex3:length .
+ex3:metre ex3:name            "metre"@en .
+ex3:metre ex3:symbol          "m" .
+ex3:metre ex3:oneEqualsOfBase 1.0 .
+
+ex3:second a                   ex3:Unit .
+ex3:second ex3:quantityKind    ex3:time .
+ex3:second ex3:name            "second"@en .
+ex3:second ex3:symbol          "s" .
+ex3:second ex3:oneEqualsOfBase 1.0 .
+
+ex3:mole a                   ex3:Unit .
+ex3:mole ex3:quantityKind    ex3:amountOfSubstance .
+ex3:mole ex3:name            "mole"@en .
+ex3:mole ex3:symbol          "mol" .
+ex3:mole ex3:oneEqualsOfBase 1.0 .
+
+ex3:ampere a                   ex3:Unit .
+ex3:ampere ex3:quantityKind    ex3:electricCurrent .
+ex3:ampere ex3:name            "ampere"@en .
+ex3:ampere ex3:symbol          "A" .
+ex3:ampere ex3:oneEqualsOfBase 1.0 .
+
+ex3:kelvin a                   ex3:Unit .
+ex3:kelvin ex3:quantityKind    ex3:temperature .
+ex3:kelvin ex3:name            "kelvin"@en .
+ex3:kelvin ex3:symbol          "K" .
+ex3:kelvin ex3:oneEqualsOfBase 1.0 .
+
+ex3:candela a                   ex3:Unit .
+ex3:candela ex3:quantityKind    ex3:luminousIntensity .
+ex3:candela ex3:name            "meter"@en .
+ex3:candela ex3:symbol          "cd" .
+ex3:candela ex3:oneEqualsOfBase 1.0 .
+
+ex3:kilogram a                   ex3:Unit .
+ex3:kilogram ex3:quantityKind    ex3:mass .
+ex3:kilogram ex3:name            "meter"@en .
+ex3:kilogram ex3:symbol          "kg" .
+ex3:kilogram ex3:oneEqualsOfBase 1.0 .
+
+ex3:length a                                      ex3:QuantityKind .
+ex3:length ex3:name                               "length"@en .
+ex3:length ex3:amountOfSubstanceDimensionExponent 0 .
+ex3:length ex3:electricCurrentDimensionExponent   0 .
+ex3:length ex3:lengthDimensionExponent            1 .
+ex3:length ex3:luminousIntensityDimensionExponent 0 .
+ex3:length ex3:massDimensionExponent              0 .
+ex3:length ex3:temperatureDimensionExponent       0 .
+ex3:length ex3:timeDimensionExponent              0 .
+
+ex3:time a                                      ex3:QuantityKind .
+ex3:time ex3:name                               "time"@en .
+ex3:time ex3:amountOfSubstanceDimensionExponent 0 .
+ex3:time ex3:electricCurrentDimensionExponent   0 .
+ex3:time ex3:lengthDimensionExponent            0 .
+ex3:time ex3:luminousIntensityDimensionExponent 0 .
+ex3:time ex3:massDimensionExponent              0 .
+ex3:time ex3:temperatureDimensionExponent       0 .
+ex3:time ex3:timeDimensionExponent              1 .
+
+ex3:amountOfSubstance a                                      ex3:QuantityKind .
+ex3:amountOfSubstance ex3:name                               "amountOfSubstance"@en .
+ex3:amountOfSubstance ex3:amountOfSubstanceDimensionExponent 1 .
+ex3:amountOfSubstance ex3:electricCurrentDimensionExponent   0 .
+ex3:amountOfSubstance ex3:lengthDimensionExponent            0 .
+ex3:amountOfSubstance ex3:luminousIntensityDimensionExponent 0 .
+ex3:amountOfSubstance ex3:massDimensionExponent              0 .
+ex3:amountOfSubstance ex3:temperatureDimensionExponent       0 .
+ex3:amountOfSubstance ex3:timeDimensionExponent              0 .
+
+ex3:electricCurrent a                                      ex3:QuantityKind .
+ex3:electricCurrent ex3:name                               "electricCurrent"@en .
+ex3:electricCurrent ex3:amountOfSubstanceDimensionExponent 0 .
+ex3:electricCurrent ex3:electricCurrentDimensionExponent   1 .
+ex3:electricCurrent ex3:lengthDimensionExponent            0 .
+ex3:electricCurrent ex3:luminousIntensityDimensionExponent 0 .
+ex3:electricCurrent ex3:massDimensionExponent              0 .
+ex3:electricCurrent ex3:temperatureDimensionExponent       0 .
+ex3:electricCurrent ex3:timeDimensionExponent              0 .
+
+ex3:temperature a                                      ex3:QuantityKind .
+ex3:temperature ex3:name                               "temperature"@en .
+ex3:temperature ex3:amountOfSubstanceDimensionExponent 0 .
+ex3:temperature ex3:electricCurrentDimensionExponent   0 .
+ex3:temperature ex3:lengthDimensionExponent            0 .
+ex3:temperature ex3:luminousIntensityDimensionExponent 0 .
+ex3:temperature ex3:massDimensionExponent              0 .
+ex3:temperature ex3:temperatureDimensionExponent       1 .
+ex3:temperature ex3:timeDimensionExponent              0 .
+
+ex3:luminousIntensity a                                      ex3:QuantityKind .
+ex3:luminousIntensity ex3:name                               "luminousIntensity"@en .
+ex3:luminousIntensity ex3:amountOfSubstanceDimensionExponent 0 .
+ex3:luminousIntensity ex3:electricCurrentDimensionExponent   0 .
+ex3:luminousIntensity ex3:lengthDimensionExponent            0 .
+ex3:luminousIntensity ex3:luminousIntensityDimensionExponent 1 .
+ex3:luminousIntensity ex3:massDimensionExponent              0 .
+ex3:luminousIntensity ex3:temperatureDimensionExponent       0 .
+ex3:luminousIntensity ex3:timeDimensionExponent              0 .
+
+ex3:mass a                                      ex3:QuantityKind .
+ex3:mass ex3:name                               "mass"@en .
+ex3:mass ex3:amountOfSubstanceDimensionExponent 0 .
+ex3:mass ex3:electricCurrentDimensionExponent   0 .
+ex3:mass ex3:lengthDimensionExponent            0 .
+ex3:mass ex3:luminousIntensityDimensionExponent 0 .
+ex3:mass ex3:massDimensionExponent              1 .
+ex3:mass ex3:temperatureDimensionExponent       0 .
+ex3:mass ex3:timeDimensionExponent              0 .
+
+ex3:kilometre a                   ex3:Unit .
+ex3:kilometre ex3:quantityKind    ex3:length .
+ex3:kilometre ex3:name            "kilometre"@en .
+ex3:kilometre ex3:symbol          "km" .
+ex3:kilometre ex3:oneEqualsOfBase 1000 .
+
+ex3:millimetre a                   ex3:Unit .
+ex3:millimetre ex3:quantityKind    ex3:length .
+ex3:millimetre ex3:name            "millimetre"@en .
+ex3:millimetre ex3:symbol          "mm" .
+ex3:millimetre ex3:oneEqualsOfBase 0.001 .

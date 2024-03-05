@@ -1,0 +1,209 @@
+@base                     <http://example.org/comparison#> .
+@prefix abecto:           <java:de.uni_jena.cs.fusion.abecto.processor.> .
+@prefix av:               <http://w3id.org/abecto/vocabulary#> .
+@prefix dqv:              <http://www.w3.org/ns/dqv#> .
+@prefix ex1:              <http://example.org/graph1/> .
+@prefix ex2:              <http://example.org/graph2/> .
+@prefix ex3:              <http://example.org/graph3/> .
+@prefix oa:               <http://www.w3.org/ns/oa#> .
+@prefix pplan:            <http://purl.org/net/p-plan#> .
+@prefix rdf:              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:              <http://www.w3.org/2001/XMLSchema#> .
+
+<plan> a av:Plan ;
+    rdfs:label "ABECTO CI Demo Example Comparison"@en;
+    .
+
+<aspectUnit> a av:Aspect ;
+    rdfs:label "Unit of Measurement"@en;
+    av:keyVariableName "unit" ;
+    .
+[]  a av:AspectPattern ;
+    av:ofAspect <aspectUnit> ;
+    av:associatedDataset ex1: ;
+    av:definingQuery """
+        PREFIX ex1: <http://example.org/graph1/> 
+        SELECT ?unit ?quantity ?name ?symbol ?oneEqualsOfBase
+        WHERE {
+			?unit	a	ex1:Unit .
+			OPTIONAL { ?unit	ex1:quantityKind    ?quantityKind . }
+			OPTIONAL { ?unit	ex1:name            ?name . }
+			OPTIONAL { ?unit	ex1:symbol          ?symbol . }
+			OPTIONAL { ?unit	ex1:oneEqualsOfBase ?oneEqualsOfBase . }
+        }
+    """ ;
+	.
+[]  a av:AspectPattern ;
+    av:ofAspect <aspectUnit> ;
+    av:associatedDataset ex2: ;
+    av:definingQuery """
+        PREFIX ex2: <http://example.org/graph2/> 
+        SELECT ?unit ?quantity ?name ?symbol ?oneEqualsOfBase
+        WHERE {
+			?unit	a	ex2:Unit .
+			OPTIONAL { ?unit	ex2:quantityKind    ?quantityKind . }
+			OPTIONAL { ?unit	ex2:name            ?name . }
+			OPTIONAL { ?unit	ex2:symbol          ?symbol . }
+			OPTIONAL { ?unit	ex2:oneEqualsOfBase ?oneEqualsOfBase . }
+        }
+    """ ;
+	.
+[]  a av:AspectPattern ;
+    av:ofAspect <aspectUnit> ;
+    av:associatedDataset ex3: ;
+    av:definingQuery """
+        PREFIX ex3: <http://example.org/graph3/> 
+        SELECT ?unit ?quantity ?name ?symbol ?oneEqualsOfBase
+        WHERE {
+			?unit	a	ex3:Unit .
+			OPTIONAL { ?unit	ex3:quantityKind    ?quantityKind . }
+			OPTIONAL { ?unit	ex3:name            ?name . }
+			OPTIONAL { ?unit	ex3:symbol          ?symbol . }
+			OPTIONAL { ?unit	ex3:oneEqualsOfBase ?oneEqualsOfBase . }
+        }
+    """ ;
+	.
+
+<aspectQuantityKind> a av:Aspect ;
+    rdfs:label "Quantity Kind"@en;
+    av:keyVariableName "quantityKind" ;
+    .
+[]  a av:AspectPattern ;
+    av:ofAspect <aspectQuantityKind> ;
+    av:associatedDataset ex1: ;
+    av:definingQuery """
+        PREFIX ex1: <http://example.org/graph1/> 
+        SELECT ?quantityKind ?name ?amountOfSubstanceDimensionExponent ?electricCurrentDimensionExponent ?lengthDimensionExponent ?luminousIntensityDimensionExponent ?massDimensionExponent ?temperatureDimensionExponent ?timeDimensionExponent
+        WHERE {
+			?quantityKind 	a	ex1:QuantityKind .
+			OPTIONAL { ?quantityKind 	ex1:name                               ?name . }
+			OPTIONAL { ?quantityKind	ex1:amountOfSubstanceDimensionExponent ?amountOfSubstanceDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex1:electricCurrentDimensionExponent   ?electricCurrentDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex1:lengthDimensionExponent            ?lengthDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex1:luminousIntensityDimensionExponent ?luminousIntensityDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex1:massDimensionExponent              ?massDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex1:temperatureDimensionExponent       ?temperatureDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex1:timeDimensionExponent              ?timeDimensionExponent . }
+        }
+    """ ;
+    .
+[]  a av:AspectPattern ;
+    av:ofAspect <aspectQuantityKind> ;
+    av:associatedDataset ex2: ;
+    av:definingQuery """
+        PREFIX ex2: <http://example.org/graph2/> 
+        SELECT ?quantityKind ?name ?amountOfSubstanceDimensionExponent ?electricCurrentDimensionExponent ?lengthDimensionExponent ?luminousIntensityDimensionExponent ?massDimensionExponent ?temperatureDimensionExponent ?timeDimensionExponent
+        WHERE {
+			?quantityKind 	a	ex2:QuantityKind .
+			OPTIONAL { ?quantityKind 	ex2:name                               ?name . }
+			OPTIONAL { ?quantityKind	ex2:amountOfSubstanceDimensionExponent ?amountOfSubstanceDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex2:electricCurrentDimensionExponent   ?electricCurrentDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex2:lengthDimensionExponent            ?lengthDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex2:luminousIntensityDimensionExponent ?luminousIntensityDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex2:massDimensionExponent              ?massDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex2:temperatureDimensionExponent       ?temperatureDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex2:timeDimensionExponent              ?timeDimensionExponent . }
+        }
+    """ ;
+    .
+[]  a av:AspectPattern ;
+    av:ofAspect <aspectQuantityKind> ;
+    av:associatedDataset ex3: ;
+    av:definingQuery """
+        PREFIX ex3: <http://example.org/graph3/> 
+        SELECT ?quantityKind ?name ?amountOfSubstanceDimensionExponent ?electricCurrentDimensionExponent ?lengthDimensionExponent ?luminousIntensityDimensionExponent ?massDimensionExponent ?temperatureDimensionExponent ?timeDimensionExponent
+        WHERE {
+			?quantityKind 	a	ex3:QuantityKind .
+			OPTIONAL { ?quantityKind 	ex3:name                               ?name . }
+			OPTIONAL { ?quantityKind	ex3:amountOfSubstanceDimensionExponent ?amountOfSubstanceDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex3:electricCurrentDimensionExponent   ?electricCurrentDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex3:lengthDimensionExponent            ?lengthDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex3:luminousIntensityDimensionExponent ?luminousIntensityDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex3:massDimensionExponent              ?massDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex3:temperatureDimensionExponent       ?temperatureDimensionExponent . }
+			OPTIONAL { ?quantityKind	ex3:timeDimensionExponent              ?timeDimensionExponent . }
+        }
+    """ ;
+    .
+
+<ex1Source> a av:Step ;
+    rdfs:label "Load Example Graph 1"@en;
+    pplan:isStepOfPlan <plan> ;
+    av:processorClass abecto:FileSourceProcessor ;
+    av:associatedDataset ex1: ;
+    av:hasParameter [av:key "path" ; av:value "graph1.ttl" ] ;
+    .
+
+<ex2Source> a av:Step ;
+    rdfs:label "Load Example Graph 2"@en;
+    pplan:isStepOfPlan <plan> ;
+    av:processorClass abecto:FileSourceProcessor ;
+    av:associatedDataset ex2: ;
+    av:hasParameter [av:key "path" ; av:value "graph2.ttl" ] ;
+    .
+
+<ex3Source> a av:Step ;
+    rdfs:label "Load Example Graph 3"@en;
+    pplan:isStepOfPlan <plan> ;
+    av:processorClass abecto:FileSourceProcessor ;
+    av:associatedDataset ex3: ;
+    av:hasParameter [av:key "path" ; av:value "graph3.ttl" ] ;
+    .
+
+<unitMappingSymbol> a av:Step ;
+    rdfs:label "Unit Mapping using Symbol"@en;
+    pplan:isStepOfPlan <plan> ;
+    av:processorClass abecto:EquivalentValueMappingProcessor ;
+    pplan:isPrecededBy <ex1Source>, <ex2Source>, <ex3Source> ;
+    av:hasParameter
+        [av:key "aspect" ; av:value <aspectUnit> ] ,
+        [av:key "variables" ; av:value "symbol" ] ;
+    .
+
+<unitComparison> a av:Step ;
+    rdfs:label "Unit Comparison"@en;
+    pplan:isStepOfPlan <plan> ;
+    av:processorClass abecto:PropertyComparisonProcessor ;
+    pplan:isPrecededBy <unitMappingSymbol> ;
+    av:predefinedMetaDataGraph <predefinedMetaDataGraph2>, <predefinedMetaDataGraph3> ;
+    av:hasParameter
+        [av:key "aspect" ; av:value <aspectUnit> ] ,
+        [av:key "variables" ; av:value "name", "quantityKind", "oneEqualsOfBase" ] ;
+    .
+
+<quantityKindMappingLabel> a av:Step ;
+    rdfs:label "Quantity Kind Mapping Using Name"@en;
+    pplan:isStepOfPlan <plan> ;
+    av:processorClass abecto:JaroWinklerMappingProcessor ;
+    pplan:isPrecededBy <ex1Source>, <ex2Source>, <ex3Source> ;
+    av:hasParameter
+        [av:key "threshold" ; av:value 9e-1 ] ,
+        [av:key "caseSensitive" ; av:value false ] ,
+        [av:key "aspect" ; av:value <aspectQuantityKind> ] ,
+        [av:key "variables" ; av:value "name" ] ;
+    .
+
+<quantityKindComparison> a av:Step ;
+    rdfs:label "Quantity Kind Comparison"@en;
+    pplan:isStepOfPlan <plan> ;
+    av:processorClass abecto:PropertyComparisonProcessor ;
+    pplan:isPrecededBy <quantityKindMappingLabel> ;
+    av:predefinedMetaDataGraph <predefinedMetaDataGraph2>, <predefinedMetaDataGraph3> ;
+    av:hasParameter
+        [av:key "aspect" ; av:value <aspectQuantityKind> ] ,
+        [av:key "variables" ; av:value "name", "timeDimensionExponent", "luminousIntensityDimensionExponent", "amountOfSubstanceDimensionExponent", "electricCurrentDimensionExponent", "temperatureDimensionExponent", "massDimensionExponent", "lengthDimensionExponent"
+        ] ;
+    .
+
+<completeness> a av:Step;
+    rdfs:label "Assess Completeness"@en;
+    pplan:isStepOfPlan <plan> ;
+    av:processorClass abecto:PopulationComparisonProcessor ;
+    pplan:isPrecededBy <unitMappingSymbol>, <quantityKindMappingLabel> ;
+    av:hasParameter
+        [av:key "aspects" ; av:value <aspectUnit>, <aspectQuantityKind> ] ;
+    .
+
+<predefinedMetaDataGraph2> av:associatedDataset <http://example.org/graph2/> .
+<predefinedMetaDataGraph3> av:associatedDataset <http://example.org/graph3/> .
